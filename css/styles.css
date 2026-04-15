@@ -379,14 +379,14 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 80%, rgba(61, 145, 101, 0.3) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(212, 168, 75, 0.15) 0%, transparent 50%);
+    url('https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=1600&q=80') center/cover no-repeat;
+  opacity: 0.35;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect fill="url(%23g)" width="100" height="100"/></svg>');
+  background: linear-gradient(to bottom, rgba(26,58,42,0.6) 0%, rgba(26,58,42,0.3) 50%, rgba(26,58,42,0.7) 100%);
 }
 
 .hero__content {
@@ -477,17 +477,12 @@ a {
   align-items: center;
 }
 
-.about__image-placeholder {
+.about__img {
   width: 100%;
   aspect-ratio: 4/3;
-  background: linear-gradient(135deg, var(--green-200) 0%, var(--green-300) 100%);
+  object-fit: cover;
   border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: var(--green-700);
-  font-weight: 500;
+  box-shadow: var(--shadow-lg);
 }
 
 .about__content .section__tag {
@@ -548,21 +543,15 @@ a {
   grid-column: span 2;
 }
 
-.gallery__placeholder {
+.gallery__item img {
   width: 100%;
   aspect-ratio: 16/10;
-  background: linear-gradient(135deg, var(--green-100) 0%, var(--green-200) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-  color: var(--green-600);
-  font-weight: 500;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
-.gallery__item:hover .gallery__placeholder {
-  transform: scale(1.03);
+.gallery__item:hover img {
+  transform: scale(1.05);
 }
 
 /* ========================================
